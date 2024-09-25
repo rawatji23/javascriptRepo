@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:white;
+        }
+        * /* universal selector */
+        {
+            margin:0;  /*removes unnecessary service from page*/
+        }
+        #menu
+        {
+            height: 70px;
+            width: 84%;
+            background : gray;
+            margin: 0px 8% 0px 8%;
+        }
+        ul{
+            list-style: none;
+            float: right;
+            
+        }
+        ul > li{
+            display: inline-block;
+            margin: 20px;
+        }
+        ul> li > a{
+            text-decoration: none;
+            color: lightgrey;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+</body>
+</html>

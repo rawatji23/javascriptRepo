@@ -1,0 +1,109 @@
+insert into emp values(7369,"SMITH","CLERK","1980-12-17",7902,800,NULL,20),
+				( 7449,"ALLEN","SALESMAN", "1981-02-20",7698,1600,300,30),
+                       ( 7521,"WARD","SALESMAN", "1981-02-22",7698,1250,500,30),
+                       ( 7566,"JONES","MANAGER", "1981-04-2",7839,2975,NULL,20),
+                      ( 7654,"MARTIN","SALESMAN", "1981-09-28",7698,1250,1400,30),
+                      ( 7698,"BLAKE","MANAGER", "1981-05-1",7839,2850,NULL,30),
+                      ( 7782,"CLARK","MANAGER", "1981-06-9",7839,2450,NULL,10),
+                      ( 7788,"SCOTT","ANALYST", "1987-04-19",7566,3000,NULL,20),
+                      ( 7839,"KING","PRESIDENT", "1981-11-17",NULL,5000,NULL,10),
+                      ( 7844,"TURNER","SALESMAN", "1981-09-08",7698,1500,0,30),
+                      ( 7876,"ADAMS","CLERK", "1987-05-23",7788,1100,NULL,20),
+                      ( 7900,"JAMES","CLERK", "1981-12-03",7698,950,NULL,30),
+                      ( 7902,"FORD","ANALYST", "1981-12-03",7566,3000,NULL,20),
+                      ( 7934,"MILLER","CLERK", "1982-01-23",7782,1300,NULL,10)
+                      ;
+
+
+
+To avoid multiple "OR" operations we can use keyword- "IN" in sql
+
+ex: select * from emp where sal in (800,1100,1500,3000);  -> comparing single column with multiple values.
+select * from emp where sal not in (800,1100,1500,3000);
+
+record of EMP where name starts with M and persons whose name not start with m
+ex: select * from emp where ename like 'M%'  -> persons whose name start with M
+ex: select * form emp where ename not like 'M%'
+persons with double A in their name
+
+ex:  select * from emp where ename like "%A%A%";
+ex: select * from emp where ename like "_A%";
+___________________________________________________
+select * from emp order by deptno desc;
+select * from emp order by deptno desc,job;
+
+
+#Aggregate functions:
+
+select max(sal) from emp ;
+select min(sal) from emp ;
+select avg(sal) from emp ;
+select sum(sal) from emp ;
+select count(sal) from emp ;
+select count(comm) from emp;
+select deptno, max(sal), min(sal) , avg(sal) from emp group by deptno; -> max , min , avg in group of deptno.
+
+Ques: Record of an employee with max sal from table
+ex:
+select * from emp where sal = (select max(sal) from emp)
+select * from emp where sal<(select avg(sal) from emp);
+
+ques: emp with max sal in each deptno?
+select * from emp where sal in( select max(sal) from emp group by deptno)
+________________________________________________________________________
+
+#CARTESIAN PRODUCT
+select * from emp, dept;  -> it multiplies rows and adds columns.
+
+to fetch records where deptno of both table matches--
+
+select * from emp, dept where emp.deptno = dept.deptno
+
+ques-> record of smith from both tables
+
+select ename,job,sal,dname,loc from emp, dept where ename="SMITH" and emp.deptno=dept.deptno;
+________________________________________________________
+
+In cartesian product we don't need any common fields
+#Inner join - we can use inner join to fetch records have common fields select ename,job,sal,dname,loc from emp, dept where ename="SMITH" and emp.deptno=dept.deptno;
+select empno,ename, sal, dname from emp inner join dept ON emp.deptno = dept.deptno;
+
+#Left outer join - All records from left table along with those records of right table which are common
+ex:select empno,ename, sal, dname from emp left join dept ON emp.deptno = dept.deptno;
+
+#RiGHT OUTER join - All records from right table along with common records of left otherwise "null" at left table
+select empno,ename, sal, dname from emp right join dept ON emp.deptno = dept.deptno;
+
+#EQUI JOIN-- 
+ques :- record of those employees who are manager
+select * from emp where empno in ( select mgr from emp);
+
+___________________________________________________________
+ques: increase commission by 50% where commission is not null
+update emp set comm = comm + comm*0.5 where comm is not null;
+
+to change the existing structure of table
+1. alter table table_name add column column_name datatype;
+2. alter table table_name modify column column_name new_datatype;
+3. alter table table_name rename column column_name to new_column_name;
+4. alter table table_name drop column column_name ;
+
+update dept set address = '223 New gouri nagar' where dname = 'accounting'sel
+
+______________________________________________________________________
+to enter a new employee in the emp table his/her deptno should match with any deptno in dept table otherwise it must not be entered
+
+->
+alter table emp
+add constraint fk_deptno
+foreign key(deptno)
+refrences dept(deptno);
+
+# to remove constraint
+alter table table_name drop constraint constraint_name;
+
+#create new table frome existing table
+create table emp10 as (select * from emp where deptno =10)
+
+#delete from emp
+drop from emp

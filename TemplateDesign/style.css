@@ -1,0 +1,295 @@
+body{
+    background: white;
+}
+*{
+    margin: 0;
+}
+#container{
+    height: 1280px;
+    /* width: 84%; */
+    /* margin: 0px 8%; */
+}
+#nav{
+    height: 80px;
+    width: 100%;
+    background: white;
+}
+#header{
+    height: 300px;
+    width: 100%;
+    background: #C4D7FF;
+}
+#content{
+    height: 650px;
+    width: 100%;
+    background: #ebe5e4;
+}
+#footer{
+    height: 250px;
+    width: 100%;
+    background: #f4eeed;
+    /* display: inline-block; */
+}
+#navleft{
+    height: 100%;
+    width: 30%;
+    float: left;
+    /* background: blue; */
+}
+#navright{
+    height: 100%;
+    width: 70%;
+    float: right;
+    /* background: yellow; */
+}
+#navleft img{
+    height: 100%;
+    width: 40%;
+    margin-left: 30%;
+    /* border-radius: */
+}
+#navright ul{
+    list-style: none;
+    float: right;
+}
+#navright ul li{
+    display: inline-block;
+    margin: 20px;
+}
+#navright ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+#navright ul li a:hover{
+    color: pink;
+    background: yellow;
+    font-weight: bold;
+}
+#header img{
+    height: 100%;
+    width: 100%;
+    /* margin-left: 35%; */
+}
+#content #contentleft{
+    float: left;
+    width: 35%;
+    background: white;
+    height: 100%;
+    align-items: center;
+}
+#content #contentright{
+    float: right;
+    width: 65%;
+    /* background: #0e805f; */
+    height: 100%;
+}
+#content #contentleft img{
+    height: 80%;
+    width: 80%;
+    /* margin: 5% ; */
+    margin-top: 15%;
+    margin-left: 10%;
+    border-radius: 30px;
+}
+#content #contentright #crt{
+    height: 33.33%;
+    width: 100%;
+    /* background: orange; */
+}
+#content #contentright #crm{
+    height: 33.33%;
+    width: 100%;
+    /* background: purple; */
+}
+#content #contentright #crb{
+    height: 33.33%;
+    width: 100%;
+    /* background: green; */
+}
+#content #contentright #crt #crt1{
+    height: 100%;
+    width: 33.33%;
+    float: left;
+    /* background: blue; */
+}
+#content #contentright #crt #crt1 img{
+    height: 80%;
+    width: 80%;
+    margin-top: 8% ;
+    margin-left: 10%;
+    border-radius: 10px;
+}
+#content #contentright #crt #crt2{
+    height: 100%;
+    width: 33.33%;
+    float: left;
+    /* background: red; */
+}
+#content #contentright #crt #crt2 img{
+    height: 80%;
+    width: 80%;
+    margin-top: 8% ;
+    margin-left: 10%;
+    border-radius: 10px;
+}
+#content #contentright #crt #crt3{
+    height: 100%;
+    width: 33.33%;
+    float: right;
+    /* background: red; */
+}
+#content #contentright #crt #crt3 img{
+    height: 80%;
+    width: 80%;
+    margin-top: 8% ;
+    margin-left: 10%;
+    border-radius: 10px;
+}
+#content #contentright #crm #crm1{
+    height: 100%;
+    width: 33.33%;
+    float: left;
+    /* background: red; */
+}
+#content #contentright #crm #crm2{
+    height: 100%;
+    width: 33.33%;
+    float: left;
+    /* background: red; */
+}
+#content #contentright #crm #crm3{
+    height: 100%;
+    width: 33.33%;
+    float: right;
+    /* background: red; */
+}
+#content #contentright #crm #crm1 img{
+    height: 80%;
+    width: 80%;
+    margin-top: 8% ;
+    margin-left: 10%;
+    border-radius: 10px;
+}
+#content #contentright #crm #crm2 img{
+    height: 80%;
+    width: 80%;
+    margin-top: 8% ;
+    margin-left: 10%;
+    border-radius: 10px;
+}
+#content #contentright #crm #crm3 img{
+    height: 80%;
+    width: 80%;
+    margin-top: 8% ;
+    margin-left: 10%;
+    border-radius: 10px;
+}
+#content #contentright #crb #crb1{
+    height: 100%;
+    width: 33.33%;
+    float: left;
+    /* background: red; */
+}
+#content #contentright #crb #crb2{
+    height: 100%;
+    width: 33.33%;
+    float: left;
+    /* background: red; */
+}
+#content #contentright #crb #crb3{
+    height: 100%;
+    width: 33.33%;
+    float: right;
+    /* background: red; */
+}
+#content #contentright #crb #crb1 img{
+    height: 80%;
+    width: 80%;
+    margin-top: 8% ;
+    margin-left: 10%;
+    border-radius: 10px;
+}
+#content #contentright #crb #crb2 img{
+    height: 80%;
+    width: 80%;
+    margin-top: 8% ;
+    margin-left: 10%;
+    border-radius: 10px;
+}
+#content #contentright #crb #crb3 img{
+    height: 80%;
+    width: 80%;
+    margin-top: 8% ;
+    margin-left: 10%;
+    border-radius: 10px;
+}
+#footer #footlogo{
+    height: 15%;
+    background: blue;
+}
+#footer #footlogo img{
+    height: 80%;
+    width: 10%;
+    /* background: blue; */
+    margin-left: 45px;
+}
+#footer #about{
+    height: 75%;
+    display: flex;
+}
+#footer #about #foot1{
+    height: 100%;
+    width: 20%;
+    background: yellowgreen;
+    /* float: left; */
+    
+}
+#footer #about #foot2{
+    height: 100%;
+    width: 20%;
+    background: rgb(169, 140, 134)
+}
+#footer #about #foot3{
+    height: 100%;
+    width: 20%;
+    background: rgb(74, 71, 124)
+}
+#footer #about #foot4{
+    height: 100%;
+    width: 20%;
+    background: rgb(176, 111, 182);
+    /* float: right; */
+}
+#footer #about #foot5{
+    height: 100%;
+    width: 20%;
+    background: rgb(74, 71, 124)
+}
+#footer .end{
+    height: 10%;
+    background: green;
+}
+.footerheading{
+        text-align: center;
+        font-size: 1rem;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-family: Okra, Helvetica, sans-serif;
+        /* margin: 0px 0px 1.2rem; */
+}
+#about #foot5 #sociallinks{
+    height:20% ;
+    background: red;
+}
+#foot5 img{
+    margin-left: 25%;
+    width: 50%
+}
+#about a{
+    text-align: center;
+    text-decoration: none;
+    color: rgb(105, 105, 105);
+    font-family: Okra, Helvetica, sans-serif;
+}
